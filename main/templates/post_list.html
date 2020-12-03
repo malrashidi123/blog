@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+            <div class="clearfix">
+            <a class="btn btn-primary float-left" href="https://www.borealisgroup.com/polyolefins/healthcare/medical-technology-equipment">The Medical link &rarr;</a>
+
+
+            <div class="clearfix">
+            <a class="btn btn-primary float-right" href="https://www.techwalla.com/articles/types-of-communication-technology">The Communication link &rarr;</a>
+
+
+<div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <img src="https://www.techquintal.com/wp-content/uploads/2017/03/Modern-Technology-Gadgets-1024x576.jpg" alt="technology" width="600" height="500">
+
+
+        
+          {% for post in posts %}
+
+          <div class="post-preview">
+            <a href="{% url 'post_detail' pk=post.pk %}">
+             
+              
+              <h2 class="post-title">
+                {{ post.title }}
+              </h2>
+              
+            </a>
+            
+            <p class="post-meta">Posted by
+              <a href="#">{{ post.author }}</a>
+              on {{ post.date}}</p>
+          </div>
+          <hr>
+          {% endfor %}
+          <!-- Pager -->
+          <a href="{% url 'post_new' %}" class="top-menu"><button class="btn btn-primary">Create New Post</button></a><br><p>Thanks and special appreciation, miss (Arwa) for giving us and increasing the knowledge enough to make this site. and I thank all those who contributed to the work of this beautiful workshop, this thanks come from the heart❤</p>
+       
+
+        </div>
+      </div>
+    </div>
+
+    <hr> 
+{% endblock %}
