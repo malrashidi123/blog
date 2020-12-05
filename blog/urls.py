@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('main.urls')),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
